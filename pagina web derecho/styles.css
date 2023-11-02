@@ -1,0 +1,41 @@
+body {
+    background-color: #e0ffff; /* Azul cian */
+}
+
+#sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background: #008b8b; /* Azul cian oscuro */
+    padding-top: 20px;
+    transition: left 0.3s; /* Agregar una transición de 0.3 segundos para animar el desplazamiento lateral */
+}
+
+#sidebar.active {
+    left: 0;
+    transition: left 0.3s; /* Agregar una transición de 0.3 segundos para animar el desplazamiento lateral */
+}
+
+/* Estilo de los enlaces en el sidebar */
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    color: #8db5ba; /* Azul cian claro */
+}
+
+#sidebar ul li.active > a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: #008b8b; /* Azul cian oscuro */
+}
+#sidebar ul li:first-child a {
+    margin-top: 50px;
+}
